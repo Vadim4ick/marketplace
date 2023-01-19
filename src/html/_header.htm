@@ -1,0 +1,48 @@
+<header class="header">
+  <div class="header__container">
+    <div class="header__body">
+      <a class="header__logo" href="/">
+        <picture>
+          <source
+            srcset="img/logo-headerMobile.svg"
+            media="(max-width: 992px)"
+          />
+          <source srcset="img/logo-header.svg" />
+          <img src="img/logo-header.svg" alt="" />
+        </picture>
+      </a>
+
+      <div class="header__menu menu">
+        <nav class="menu__body">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#aboutUs" class="menu__link">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="#schemeWork" class="menu__link">Схема работы</a>
+            </li>
+            <li class="menu__item">
+              <a href="#cost" class="menu__link">Стоимость</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contacts" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="header-btn__mobile"></div>
+        </nav>
+
+        <button type="button" class="menu__icon icon-menu">
+          <span></span>
+        </button>
+      </div>
+
+      <a
+        href="#formContacts"
+        data-da=".header-btn__mobile, 992,2"
+        class="btn header__btn"
+      >
+        обратная связь
+      </a>
+    </div>
+  </div>
+</header>

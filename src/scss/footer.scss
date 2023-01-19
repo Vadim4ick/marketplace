@@ -1,0 +1,110 @@
+//==================================================================================
+.footer {
+  margin-top: rem(200);
+  position: relative;
+  background: #cdb1f4;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  @include adaptiveValue("font-size", 16, 14);
+  line-height: math.div(22, 16);
+
+  @media (max-width: $mobile) {
+    margin-top: rem(170);
+  }
+
+  &__col {
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("gap", 65, 30, 1920, 992);
+    }
+    &:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $tablet) {
+      &:not(:last-child) {
+        margin-bottom: rem(40);
+      }
+    }
+
+    span {
+      @media (min-width: $mobile) {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__links {
+    @media (max-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: em(500)) {
+      flex-direction: column;
+      gap: rem(20);
+    }
+  }
+
+  &__body {
+    align-items: flex-end;
+    padding-bottom: rem(65);
+    @media (min-width: $tablet) {
+      display: flex;
+      height: 300px;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $tablet) {
+      display: grid;
+      padding-top: rem(70);
+      padding-bottom: rem(30);
+    }
+  }
+}
+
+.line-after {
+  width: rem(2000);
+  height: rem(115);
+  transform: rotate(6deg);
+  background: #cdb1f4;
+  z-index: 2;
+  box-shadow: 0px 27px 51px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: rem(-95);
+  margin-left: rem(-10);
+  max-width: calc(100% + 20px);
+
+  @media (max-width: $mobile) {
+    height: rem(75);
+    margin-top: rem(-75);
+  }
+}
+
+.line-before {
+  width: rem(2000);
+  height: rem(115);
+  background: #fb4f31;
+  box-shadow: 0px 33px 43px rgba(0, 0, 0, 0.25);
+  transform: rotate(-6deg);
+  display: block;
+  margin-top: rem(-95);
+  margin-left: rem(-10);
+  max-width: calc(100% + 20px);
+
+  @media (max-width: $mobile) {
+    height: rem(75);
+    margin-top: rem(-75);
+  }
+}
+
+//==================================================================================

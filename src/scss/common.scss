@@ -1,0 +1,92 @@
+// Заголовки, общие БЄМ блоки и проче...
+h1 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  @include adaptiveValue("font-size", 54, 28);
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 40, 28);
+  line-height: math.div(49, 40);
+  text-transform: uppercase;
+}
+
+.cart-scheme.one {
+  .cart-scheme__img {
+    top: -40px;
+  }
+}
+
+.cart-scheme.four {
+  .cart-scheme__img {
+    right: -20px;
+  }
+}
+
+.cart-scheme.two {
+  .cart-scheme__text {
+    p {
+      font-size: rem(15);
+    }
+  }
+}
+
+.us-work__cart.preparation {
+  &::before {
+    font-size: rem(44);
+    @media (max-width: $mobile) {
+      padding-top: rem(5);
+      font-size: rem(30);
+    }
+  }
+}
+
+.map {
+  width: 970px;
+  height: 485px;
+  background-color: #333;
+  margin-left: auto;
+  border: 1px solid #000000;
+  overflow: hidden;
+
+  @media (max-width: em(1150)) {
+    width: 750px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    height: 256px;
+    border-radius: rem(20);
+  }
+}
+
+@media (max-width: $mobile) {
+  #map > ymaps {
+    border-radius: rem(20);
+    overflow: hidden;
+  }
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.contacts-our__cart .tel {
+  color: #fb4f31;
+  font-weight: 600;
+}
+
+.contacts-our__item {
+  color: #fb4f31;
+  font-weight: 600;
+}

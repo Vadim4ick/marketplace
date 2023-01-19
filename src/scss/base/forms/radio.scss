@@ -1,0 +1,86 @@
+.options {
+  display: flex;
+  gap: rem(40);
+  align-items: flex-start;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: rem(30);
+  }
+
+  // .options__item
+  &__item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    @include adaptiveValue("gap", 20, 10);
+  }
+  // .options__input
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    &:checked + .options__label:after {
+      transform: scale(1);
+    }
+  }
+  // .options__label
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    @include adaptiveValue("gap", 20, 10);
+    &:before {
+      content: "";
+      align-self: flex-start;
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      border-radius: 50%;
+      border: 2px solid #000000;
+      z-index: 5;
+
+      @media (max-width: $mobile) {
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
+      }
+    }
+    &:after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      transform: scale(0);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      // background-color: #fb4f31;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      display: flex;
+      background-image: url("../img/check.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      @media (max-width: $mobile) {
+        width: 26px;
+        height: 26px;
+        background-image: url("../img/checkMobile.svg");
+      }
+    }
+  }
+  // .options__text
+  &__text {
+  }
+}
+
+._form-error .options__label {
+  &::before {
+    border-color: red;
+  }
+
+  span {
+    color: red;
+  }
+}

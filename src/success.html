@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__body">
+            <a class="header__logo" href="/">
+              <picture>
+                <source
+                  srcset="img/logo-headerMobile.svg"
+                  media="(max-width: 992px)"
+                />
+                <source srcset="img/logo-header.svg" />
+                <img src="img/logo-header.svg" alt="" />
+              </picture>
+            </a>
+
+            <a href="./index.html" class="header__link-prev">
+              Вернуться назад
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="page-success">
+          <div class="page-success__container">
+            <div class="page-success__body">
+              <img
+                src="img/popup/sucsess.png"
+                srcset="img/popup/sucsess-2x.png 2x"
+                alt=""
+              />
+
+              <p>Ваша заявка успешно отправлена!</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU&amp;_v=20220920093742"></script>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
